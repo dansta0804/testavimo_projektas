@@ -76,13 +76,9 @@
 \vskip 1pt
 \hskip 200pt {\large Studentė}
 \vskip 7pt
-\hskip 200pt {\bf \large Doc. Mindaugas Vasiljevas}
+\hskip 200pt {\bf \large Dr. Šarūnas Packevičius}
 \vskip 1pt
-\hskip 200pt {\large Projekto vadovas}
-\vskip 7pt
-\hskip 200pt {\bf \large Doc. dr. Eglė Butkevičiūtė}
-\vskip 1pt
-\hskip 200pt {\large Dėstytoja}
+\hskip 200pt {\large Dėstytojas}
 
 \bigskip
 
@@ -105,30 +101,264 @@
 %%%%%%%%%%%%%%%%%%%%%
 
 \section{Įvadas}
+Šiame dokumente yra aprašytas testavimo planas, kuris yra skirtas patikrinti, ar
+savarankiškos suverenios asmens tapatybės valdymo sistema, skirta darbui su
+asmenų biologiniais duomenimis, veikia taip, kaip yra sistemos speifikacijoje.
 
 \section{Testavimo apimtis}
+Bus vykdomas šių sistemos dedamųjų dalių testavimas:
+\begin{itemize}
+    \item Registracijos modulio veikimas (paskyros kūrimas skirtingoms sistemos
+    naudotojų grupėms: pacientams, gydytojams - genetikams, tyrėjams);
+    \item Sistemos naudotojų - pacientų - biologinių duomenų prieigos valdymas;
+    \item Duomenų šfravimo ir pseudonimizavimo funkcijos;
+    \item Biologinių duomenų įkėlimo funkcionalumas;
+    \item Biologinių duomenų analizės funkcionalumas;
+    \item Užklausų biologinės analizės atlikimui generavimas;
+    \item Analizės rezultatų pateiktis.
+\end{itemize}
+
+\newpage
 
 \section{Testavimo strategijos}
+Aukščiau aprašyti sistemos funkcionalumai bus testuojami, taikant šias testavimo
+strategijas:
+\begin{itemize}
+    \item \textbf{Vienetų testavimą (angl. \emph{Unit testing})}, kai bus
+    testuojami atskiri sistemos komponentai;
+    \item \textbf{Integracijos testavimą (angl. \emph{Integration testing})},
+    kai bus testuojama, kaip atskiri sistemos komponentai veikia tarpusavyje;
+    \item \textbf{Sistemos testavimą (angl. \emph{System testing})}, kai bus
+    testuojama, kaip sistema veikia kaip visuma;
+    \item \textbf{Priėmimo testavimą (angl. \emph{Acceptance testing})}, kai bus
+    tikrinama, ar sistema atitinka visus užsakovo reikalavimus;
+    \item \textbf{Alfa ir beta testavimą}, kai sistemos funkcionalumą testuos
+    sistemos kūrėjai (alfa testavmas) ir grupelė galutinių sistemos naudotojų
+    (beta testavimas);
+    \item \textbf{Našumo testavimą}, kai bus tikrinama, ar sistema tenkina
+    sistemos našumo reikalavimuas (veikia pakankamai greitai ir efektyviai);
+    \item \textbf{Saugumo testavimą}, kai bus tikrinama, ar sistema yra
+    pasiekiama tik autorizuotiems sistemos naudotojams.
+\end{itemize}
+
+\newpage
 
 \section{Pradinės sąlygos}
+Tam, jog galėtų būti pradėtas testavimo etapas, turi būti įvykdytos šios
+pradinės sąlygos:
+
+\begin{itemize}
+    \item Pilnai paruošta ir patvirtinta sistemos reikalavimų specifikacija,
+    pagal kurią būtų galima testuoti sistemos funkcionalumą;
+    \item Paruošti testavimo scenarijai, pagal kuriuos bus atliekamas
+    testavimas;
+    \item Paruošti testavimo duomenys, kurie bus naudojami testavimo metu
+    (skirtingų kategorijų sistemos naudotojų paskyros, skirtingi biologinių
+    duomenų failai, skirtingi analizės atlikimo užklausų pavyzdžiai);
+    \item Paruoštas testavimo planas, kuriame pateikta visa su testavimu
+    susijusi informacija bei pateikti testavimo scenarijai, kuriuose turės būti
+    fiksuojamas testavimo rezultatas.
+    \item Paruoštas testavimo klaidų ataskaitos šablonas, pagal kurį bus
+    fiksuojamos testavimo metu rastos klaidos.
+\end{itemize}
+
+\newpage
 
 \section{Testavimo prioritetai}
+Testavimas turi būti atliekamas pagal šiuos nustatytus prioritetus:
 
-\section{Testavimo technikos}
+\begin{itemize}
+    \item \textbf{Iš pradžių turi būti testuojami sistemos naudotojui matomi
+    sistemos funkciniai reikalavimai}. T.y., ar naujas sistemos naudotojas gali
+    užsiregistruoti sistemos kaip pacientas, gydytojas - genetikas arba tyrėjas;
+    ar prisijungęs naudotojas pagal savo kategoriją gali pasiekti jam skirtą
+    funkcionalumą. Pavyzdžiui, ar pacientas gali įkelti savo biologinius
+    duomenis ir valdyti, kokie asmenys gali šiuos duomenis pasiekti; ar
+    gydytojas - genetikas gali sukurti pacientų medicininės kortelės įrašus,
+    pasiekti pacientų biologinius duomenis ir sugeneruoti analizės atlikimo
+    užklausą tyrėjui; ar tyrėjas gali pasiekti atitinkamų pacientų biologinius
+    duomenis (jei iš gydytojo -  genetiko yra gavęs analizės atlikimo užklausą),
+    ar gali atlikti biologinių duomenų analizę ir perduoti analizės atlikimo
+    rezultatus gydytojui - genetikui.
+    \item \textbf{Toliau turi būti testuojami sistemos naudotojui nematomi
+    sistemos funkciniai reikalavimai}. T.y., ar korektiškai veikia naudotojo
+    autentifikavimo funkcijos ir ar sistemos naudotojų - pacientų - biologiniai
+    duomenys yra korektiškai šifruojami ir pseudonimizuojami.
+    \item \textbf{Vykdomas aukšto prioriteto sistemos nefunkcinių reikalavimų
+    testavimas}. T.y., testuojama, ar autentifikacijos operacijos atlikimo
+    greitis neviršija 1 sekundės, ar paciento biologinių duomenų prieigos
+    patikrinimas netrunka ilgiau nei 500 milisekundžių.
+    \item \textbf{Galiausiai vykdomas žemo prioriteto sistemos nefunkcinių
+    reikalavimų testavimas}. T.y., ar naudotojo sąsajos elementai yra tinkamai
+    išdėstyti, ar sistemoje realizuoti iššokantys langeliai netrukdo ir
+    neerzina, ar sistema yra intuityvi ir pritaikyta vyresnio amžiaus žmonėms,
+    ar sistemoje yra pateikti skirtingų techninių terminų bei reikalaujamų
+    įvesties laukų paaiškinimai.
+\end{itemize}
 
-\section{Testavimo valdymas}
-Skyriaus tikriausiai nereikia.
+\newpage
 
 \section{Rezultatai}
+Atlikus testavimą bus pateikti šie rezultatai:
+\begin{itemize}
+    \item Testavimo planas;
+    \item Testavimo klaidų ataskaita;
+    \item Užsakovo pasirašytas dokumentas, patvirtinantis, kad sistema atitinka
+    visus reikalavimus.
+\end{itemize}
+
+\newpage
 
 \section{Testavimo aplinka}
+\newpage
 
 \section{Testavimo scenarijai}
+Žemiau aprašyti keli sistemos funkcionalumo testavimo scenarijai, pagal kuriuos
+bus atliekamas testavimas.
+
+\begin{table}[htb!]
+    \captionsetup{justification=centering}
+    \caption{\small\textbf{Testavimo scenarijus Nr. 1.}}
+    \vskip -10pt
+    \begin{tabular}{|m{6cm}|m{11cm}|}
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Kodas:} &
+        \ttfamily{TS\_001}. \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Pavadinimas:} & Naudotojo
+        paskyros sukūrimas. \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Tikslas:} &
+        Patikrinti, ar sistemos svečias gali susikurti sistemos paskyrą kaip
+        sistemos naudotojas - pacientas. \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Pradinės testavimo
+        sąlygos:} & 
+        Sistemos svečias turi būti atsidaręs paskyros kūrimo langą. \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Įvestis:}
+        & Svečio vardas, pavardė, el. paštas, telefono numeris, lytis, adresas,
+        slaptažodis. \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Tikėtinas rezultatas:}
+        & Sukurtas naujas sistemos naudotojas, kuris priklauso kategorijai
+        „Pacientas“. \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Tikras rezultatas:}
+        & \textcolor{red}{\emph{Užpildoma testavimo metu...}} \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Būsena:}
+        & \textcolor{red}{\emph{Užpildoma testavimo metu: „Testas sėkmingai
+        įvykdytas“ arba „Gauta klaida“}}. \\
+        \hline
+    \end{tabular}
+    \label{table:TS_1}
+\end{table}
+
+\begin{table}[htb!]
+    \captionsetup{justification=centering}
+    \caption{\small\textbf{Testavimo scenarijus Nr. 2.}}
+    \vskip -10pt
+    \begin{tabular}{|m{6cm}|m{11cm}|}
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Kodas:} &
+        \ttfamily{TS\_002}. \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Pavadinimas:} & Biologinių
+        duomenų įkėlimas. \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Tikslas:} &
+        Patikrinti, ar sistemos naudotojas - pacientas - gali įkelti savo
+        biologinius duomenis į sistemą. \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Pradinės testavimo
+        sąlygos:} & 
+        Sistemos naudotojas - pacientas - turi būti prisijungęs prie sistemos
+        ir atsidaręs biologinių duomenų įkėlimo langą. \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Įvestis:}
+        & Genominių sekų failas su kokybiniais įverčiais (\emph{.fastq}). \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Tikėtinas rezultatas:}
+        & Failas sėkmingai įkeltas, užšifruotas ir išsaugotas sistemoje. \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Tikras rezultatas:}
+        & \textcolor{red}{\emph{Užpildoma testavimo metu...}} \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Būsena:}
+        & \textcolor{red}{\emph{Užpildoma testavimo metu: „Testas sėkmingai
+        įvykdytas“ arba „Gauta klaida“}}. \\
+        \hline
+    \end{tabular}
+    \label{table:TS_2}
+\end{table}
+
+\begin{table}[htb!]
+    \captionsetup{justification=centering}
+    \caption{\small\textbf{Testavimo scenarijus Nr. 3.}}
+    \vskip -10pt
+    \begin{tabular}{|m{6cm}|m{11cm}|}
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Kodas:} &
+        \ttfamily{TS\_003}. \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Pavadinimas:} & . \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Tikslas:} &
+        . \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Pradinės testavimo
+        sąlygos:} & 
+        . \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Įvestis:}
+        & . \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Tikėtinas rezultatas:}
+        & . \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Tikras rezultatas:}
+        & \textcolor{red}{\emph{Užpildoma testavimo metu...}} \\
+        \hline
+        \raggedleft \textbf{\cellcolor{deepchampagne}Būsena:}
+        & \textcolor{red}{\emph{Užpildoma testavimo metu: „Testas sėkmingai
+        įvykdytas“ arba „Gauta klaida“}}. \\
+        \hline
+    \end{tabular}
+    \label{table:TS_3}
+\end{table}
+
+\newpage
 
 \section{Testavimo kalendorius}
+\newpage
 
 \section{Testavimo rizikos}
+Žemiau pateiktoje lentelėje yra aprašytos rizikos, kurios gali sutrikdyti
+testavimo proceso vykdymą.
 
+\begin{table}[htb!]
+    \captionsetup{justification=centering}
+    \caption{\small\textbf{Testavimo rizikų aprašymas.}}
+    \vskip -10pt
+    \begin{tabular}{
+        |>{\centering\arraybackslash}m{4cm}
+        |>{\centering\arraybackslash}m{5cm}
+        |>{\centering\arraybackslash}m{7cm}|
+    }
+        \hline
+        \textbf{\cellcolor{deepchampagne}Rizika} &
+        \textbf{\cellcolor{deepchampagne}Aprašymas} &
+        \textbf{\cellcolor{deepchampagne}Rizikos tikimybės mažinimas}  \\
+        \hline
+        \multicolumn{1}{|>{\raggedright\arraybackslash}m{4cm}|}
+            {...} &
+        \multicolumn{1}{>{\raggedright\arraybackslash}m{5cm}|}{...} &
+        \multicolumn{1}{>{\raggedright\arraybackslash}m{7cm}|}{...}\\
+        \hline
+    \end{tabular}
+    \label{table:RIZIKOS}
+\end{table}
 
 % KABUTĖS: „ “
 \end{document}
