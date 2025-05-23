@@ -1,0 +1,24 @@
+Cannot open 'vec.dat': No such file!
+Working with vectors: 2.31 -2.5136 6.02  -3   -3.54e5 -2.81e6 -10. -5.12
+Result (dot product): 6245431.16
+
+Working with vectors: -7.7e9 6.52e74 -10.48 5   0.55 4.87 6.805e6 3.80512e3
+Result (dot product): 3.17524e+75
+
+Working with vectors: 2.225e95 3.5e7 10.025e06 6.42 6.06e5 8.1e2 8.81e5 7.11
+Result (dot product): 1.3483500000000002e+101
+
+# 3 vector pair(-s) was(were) multiplied in total.
+Working with vectors: 4 3 2 1   1 9 8 4
+Result (dot product): 51.0
+
+Working with vectors: -0.5 0.5 -1.5 1.5     2 8 9 7
+Result (dot product): 0.0
+
+Working with vectors: 0.7 2.5 -15 5         2 0 1 6
+Result (dot product): 16.4
+
+Working with vectors: 2.43 3.21 5.46 5.74   6.08 0.8 6.18 0.87
+Result (dot product): 56.079
+
+# 4 vector pair(-s) was(were) multiplied in total.

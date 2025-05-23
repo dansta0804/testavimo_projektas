@@ -1,0 +1,19 @@
+Working with vectors: 5 6a 8 9              2.3 4.05 6.001 1.5
+Value '6a' does not match numeric syntax in even_nnum.dat!
+
+Working with vectors: 1.5 6.5 5 1.5         3.6 4.05 6_ -6.3
+Value '6_' does not match numeric syntax in even_nnum.dat!
+
+Working with vectors: 4 5 6 4               7 4 9d 9
+Value '9d' does not match numeric syntax in even_nnum.dat!
+
+Working with vectors: 6.2 5.8 -7.1 5.02    -0.1 -1.05 -1.25 -0.99
+Result (dot product): -2.8047999999999993
+
+Working with vectors: 7.39 10.31 6.42 7.4   8.88 1.11 7.4 6.96
+Result (dot product): 176.0793
+
+Working with vectors: 3.84 7.72 2.52 7.87   2.59 4.65 3.91 3.93
+Result (dot product): 86.6259
+
+# 3 vector pair(-s) was(were) multiplied in total.
