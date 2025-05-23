@@ -15,4 +15,3 @@ rezultatų saugojimui. Direktoriją sudaro trys vaikinės direktorijos:
    - **Outputs/** - repozitorijoje saugomi ***vdot.py*** programos išvesties rezultatai, kuriuos yra tikimąsi gauti,
    naudojant **Inputs/** direktorijoje naudojamus įvesties duomenis (**Outputs/Exptected** direktorija), bei rezultatai,
    kurie buvo gauti praleidus testus iš **Tests/** direktorijos (**Outputs/Actual** direktorija).
-- **Assets/** - direktorijoje yra saugomos testavimo plane naudojamos iliustracijos.
