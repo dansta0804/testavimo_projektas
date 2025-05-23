@@ -6,3 +6,11 @@
 /Testavimo_planas.synctex.gz
 /Testavimo_planas.toc
 /vdot_full.py
+/.idea/testavimo_projektas.iml
+/.idea/vcs.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/modules.xml
+/.idea/misc.xml
+/.idea/codeStyles/codeStyleConfig.xml
+/Tests/__init__.py
+/Tests/Cases/__init__.py
