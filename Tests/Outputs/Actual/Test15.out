@@ -1,0 +1,27 @@
+Working with vectors: 2.31 -2.5136 6.02  -3   -3.54e5 -2.81e6 -10. -5.12
+Result (dot product): 6245431.16
+
+Working with vectors: -7.7e9 6.52e74 -10.48 5   0.55 4.87 6.805e6 3.80512e3
+Result (dot product): 3.17524e+75
+
+Working with vectors: 2.225e95 3.5e7 10.025e06 6.42 6.06e5 8.1e2 8.81e5 7.11
+Result (dot product): 1.3483500000000002e+101
+
+# 3 vector pair(-s) was(were) multiplied in total.
+Cannot open 'vectors1.dat': No such file!
+Working with vectors: 2.155e19 9.051e9 8 -7.8e5 8.85e24 9.12e05 9.661e7 -0.85
+Result (dot product): 1.907175e+44
+
+Working with vectors: -4.41 10.12e45 -7.82 3.752e3 5.94 -0.7125e7 0.85e7 -0.94
+Result (dot product): -7.2105e+52
+
+Working with vectors: 4.5e2 -5.11 5.5e66 9.13 -1.9 7.012e9 7.63 -9.11e4
+Result (dot product): 4.1965e+67
+
+Working with vectors: 8.42 8.3e5 -10.17 -8.015e5 2.125e3 9.88 -5.92 1.95e52
+Result (dot product): -1.562925e+58
+
+Working with vectors: -9.12e53 8.5 9.1e62 4.19e6 7.723e67 -6.8e5 4.0 5.04e5
+Result (dot product): -7.043375999999999e+121
+
+# 5 vector pair(-s) was(were) multiplied in total.

@@ -1,0 +1,42 @@
+Working with vectors: -26.819 44.33 10.837 27.99     -24.591 -47.42 -23.243 11.36
+Result (dot product): -1376.540562
+
+Working with vectors: -1 -4 -7 6                     -7 -6 8 -1
+Result (dot product): -31.0
+
+Working with vectors: -20.432 -25.14 -3.456 49.43    -29.745 7.9 -25.891 -32.66
+Result (dot product): -1115.760664
+
+Working with vectors: 1.149 -22.57 -3.676 22.82      47.064 -48.36 22.236 27.78
+Result (dot product): 1697.7618000000002
+
+Working with vectors: 3 2 -1 -1                      0 -5 -9 4
+Result (dot product): -5.0
+
+Working with vectors: -1 -6.007e-06 8.8377e06 7.727e01 4 -1.732e-05 3.8025e-08 -5.058e-04
+Result (dot product): -3.7030296233959588
+
+# 6 vector pair(-s) was(were) multiplied in total.
+Cannot open 'vec.dat': No such file!
+Working with vectors: 3.4 6.09 37.827 -44.44 36.157 -22.18 7.804 3.6
+Result (dot product): 123.07550799999999
+
+Working with vectors: 8 -9 -2 -3 5 2 -8 -1
+Result (dot product): 41.0
+
+Working with vectors: -3.2017e02 5.107e05 7 4.704e-06 -5.2498e04 -2.7 2.6515e-02 6.116e10
+Result (dot product): 15717091.485605001
+
+Working with vectors: -42.269 -38.99 -9.909 -4.43 9.875 -28.91 25.366 -5.92
+Result (dot product): 484.668431
+
+Working with vectors: 48.317 23.79 -3.63 39.39 34.847 29.95 46.8 -3.62
+Result (dot product): 2083.7371989999997
+
+Working with vectors: 5 2 9 2 -2 -2 -9 8
+Result (dot product): -79.0
+
+Working with vectors: 2 7 1 -6 -8 -3 1 -3
+Result (dot product): -18.0
+
+# 7 vector pair(-s) was(were) multiplied in total.
